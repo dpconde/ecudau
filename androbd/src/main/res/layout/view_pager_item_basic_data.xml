@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.fr3ts0n.ecu.gui.androbd.view.NewRouteFragment">
+
+        <TextView
+            android:id="@+id/viewpager_item_route_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:text="@string/blank_placeholder"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_vehicle_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/viewpager_item_route_description"
+            android:textSize="15sp"
+            android:text="@string/pager_adapter_basic_vehicle"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_vehicle_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_600"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/viewpager_item_route_vehicle_label"
+            android:textSize="15sp"
+            android:text="@string/blank_placeholder"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_startdate_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/viewpager_item_route_vehicle_value"
+            android:textSize="15sp"
+            android:text="@string/pager_adapter_basic_start_date"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_startdate_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_600"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/viewpager_item_route_startdate_label"
+            android:textSize="15sp"
+            android:text="@string/blank_placeholder"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_duration_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/viewpager_item_route_startdate_value"
+            android:textSize="15sp"
+            android:text="@string/pager_adapter_basic_duration"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_duration_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_600"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/viewpager_item_route_duration_label"
+            android:textSize="15sp"
+            android:text="@string/blank_placeholder"/>
+
+
+        <TextView
+            android:id="@+id/viewpager_item_route_distance_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/viewpager_item_route_duration_value"
+            android:textSize="15sp"
+            android:text="@string/pager_adapter_basic_distance"/>
+
+        <TextView
+            android:id="@+id/viewpager_item_route_distance_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_600"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/viewpager_item_route_distance_label"
+            android:textSize="15sp"
+            android:text="@string/blank_placeholder"/>
+
+
+
+</RelativeLayout>

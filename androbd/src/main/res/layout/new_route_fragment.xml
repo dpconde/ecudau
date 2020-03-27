@@ -1,0 +1,216 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fr3ts0n.ecu.gui.androbd.view.NewRouteFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout android:id="@+id/googlemaps_select_location"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="#8037387b">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/realTime_rpm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/new_route_route_rpm" />
+
+            <TextView
+                android:id="@+id/realTime_rpm_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="30sp"
+                android:layout_below="@+id/realTime_rpm_label"
+                android:layout_centerHorizontal="true"
+                android:text="@string/blank_placeholder" />
+
+            <TextView
+                android:id="@+id/realTime_rpm_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="15sp"
+                android:layout_below="@+id/realTime_rpm_value"
+                android:layout_centerHorizontal="true"
+                android:text="@string/unit_rev_min" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/realTime_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/new_route_route_speed" />
+
+            <TextView
+                android:id="@+id/realTime_speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="30sp"
+                android:layout_below="@+id/realTime_speed_label"
+                android:layout_centerHorizontal="true"
+                android:text="@string/blank_placeholder" />
+
+            <TextView
+                android:id="@+id/realTime_speed_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="15sp"
+                android:layout_below="@+id/realTime_speed_value"
+                android:layout_centerHorizontal="true"
+                android:text="@string/unit_km_h" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/realTime_consumption_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/new_route_route_consumption" />
+
+            <TextView
+                android:id="@+id/realTime_consumption_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="30sp"
+                android:layout_below="@+id/realTime_consumption_label"
+                android:layout_centerHorizontal="true"
+                android:text="@string/blank_placeholder" />
+
+            <TextView
+                android:id="@+id/realTime_consumption_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_white_1000"
+                android:textSize="15sp"
+                android:layout_below="@+id/realTime_consumption_value"
+                android:layout_centerHorizontal="true"
+                android:text="@string/unit_l_100km" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/addRoute"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/connect_buttom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/addRouteImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src = "@drawable/power_button_white"/>
+            </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="invisible">
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/onRouteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/addIncidence"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/incidence_buttom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src = "@drawable/exclamacion_white"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pauseRoute"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/play_pause_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src = "@drawable/pause_white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

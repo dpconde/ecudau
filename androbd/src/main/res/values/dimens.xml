@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="start_route_dialog_height">400dp</dimen>
+    <dimen name="incidence_dialog_height">485dp</dimen>
+
+</resources>

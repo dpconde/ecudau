@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId 'com.fr3ts0n.ecu.gui.androbd'
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 20000
+        versionName 'V2.0.0'
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "app_version", variant.versionName
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    productFlavors {
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+            jcenter()
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-plus:15.0.1'
+    implementation 'com.android.support:support-v4:27.1.0'
+    compile project(':plugin')
+    compile('com.mikepenz:materialdrawer:5.9.2@aar') {
+        transitive = true
+    }
+    //required support lib modules
+    compile 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
+    compile 'com.android.support:support-annotations:24.1.1'
+    compile 'com.android.support:design:27.1.0'
+    implementation project(':library')
+    compile 'com.google.android.gms:play-services-maps:15.0.1'
+    compile 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    compile 'com.romandanylyk:pageindicatorview:0.1.1'
+}

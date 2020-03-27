@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    tools:context="com.fr3ts0n.ecu.gui.androbd.view.NewRouteFragment">
+
+
+    <TextView
+        android:id="@+id/manufacturerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/vehicle_fragment_manufacturer" />
+
+    <EditText
+        android:id="@+id/manufacturerValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manufacturerLabel"
+        android:ems="10"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/modelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/manufacturerValue"
+        android:text="@string/vehicle_fragment_model" />
+
+    <EditText
+        android:id="@+id/modelValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modelLabel"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/fuelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/modelValue"
+        android:text="@string/vehicle_fragment_fuel" />
+
+    <Spinner
+        android:id="@+id/fuelValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/fuelLabel" />
+
+</RelativeLayout>

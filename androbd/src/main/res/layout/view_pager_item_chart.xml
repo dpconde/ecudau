@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fr3ts0n.ecu.gui.androbd.view.NewRouteFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/md_white_1000"
+            >
+                <TextView
+                    android:id="@+id/chartTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_blue_grey_50"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center|center_vertical"
+                    android:textColor="@color/md_black_1000"
+                    android:text="@string/blank_placeholder"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/chartTitle"
+                    android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/chart_min_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="@color/md_black_1000"
+                                    android:text="@string/pager_adapter_chart_min"/>
+
+                                <TextView
+                                    android:id="@+id/chart_min_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/chart_min_label"
+                                    android:textSize="20sp"
+                                    android:text="@string/blank_placeholder"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/chart_avg_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="@color/md_black_1000"
+                                    android:text="@string/pager_adapter_chart_avg"/>
+
+                                <TextView
+                                    android:id="@+id/chart_avg_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/chart_avg_label"
+                                    android:textSize="20sp"
+                                    android:text="@string/blank_placeholder"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/chart_max_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="@color/md_black_1000"
+                                    android:text="@string/pager_adapter_chart_max"/>
+
+                                <TextView
+                                    android:id="@+id/chart_max_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/chart_max_label"
+                                    android:textSize="20sp"
+                                    android:text="@string/blank_placeholder"/>
+
+                        </RelativeLayout>
+                </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/md_white_1000">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+</LinearLayout>

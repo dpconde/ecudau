@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.fr3ts0n.ecu.gui.androbd.view.NewRouteFragment">
+
+
+    <TextView
+        android:id="@+id/routeDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/new_route_route_description" />
+
+    <EditText
+        android:id="@+id/routeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/routeDescriptionLabel"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/new_route_route_description_hint" />
+
+    <TextView
+        android:id="@+id/carSelectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/routeDescription"
+        android:text="@string/new_route_route_vehicle" />
+
+    <Spinner
+        android:id="@+id/carSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/carSelectLabel"/>
+
+</RelativeLayout>

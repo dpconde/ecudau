@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="370dp"
+    android:layout_marginBottom="16dp">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/route_item_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:liteMode="true"
+        android:clickable="false"
+        map:mapType="normal">
+
+    </com.google.android.gms.maps.MapView>
+
+    <RelativeLayout android:id="@+id/googlemaps_select_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/route_item_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#80000000">
+
+            <TextView
+                android:id="@+id/route_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank_placeholder"
+                android:textSize="24sp"
+                android:textColor="@color/md_white_1000"
+               />
+
+            <TextView
+                android:id="@+id/route_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/route_item_description"
+                android:textColor="@color/md_grey_300"
+                android:text="@string/blank_placeholder" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/route_item_date"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/car_white"/>
+
+                <TextView
+                    android:id="@+id/route_item_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/md_white_1000"
+                    android:text="@string/blank_placeholder" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statsButton"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/deleteRouteButton"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:background="#80000000">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/bar_chart_white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deleteRouteButton"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:background="#80000000">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/trash_white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
